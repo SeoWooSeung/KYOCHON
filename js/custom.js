@@ -7,7 +7,7 @@ $(function () {
     });
     $('.banner_slide').slick({
         arrows: false,
-        autoplay: false,
+        autoplay: true,
         pauseOnHover: false,
         slidesToShow: 3,
         slidesToScroll: 1,

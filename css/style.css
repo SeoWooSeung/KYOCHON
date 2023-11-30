@@ -19,14 +19,11 @@
 }
 
 .header .gnb {
+    font-size: 20px;
+    font-weight: 600;
     margin: 0 auto;
     white-space: nowrap;
     margin-top: 30px;
-}
-
-.header .search {
-    margin: 30px 0 0 auto;
-    font-size: 20px;
 }
 
 .header .gnb>ul {
@@ -36,6 +33,10 @@
 
 .header .gnb>ul>li {
     position: relative;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
 }
 
 .header .gnb>ul>li~li::after {
@@ -63,8 +64,8 @@
     left: 50%;
     top: 70px;
     z-index: 1;
-
     overflow: hidden;
+
     background: #fff;
     line-height: 40px;
     border: 1px solid #ddd;
@@ -81,6 +82,8 @@
 }
 
 
+
+
 .header .gnb>ul>li:hover .sub {
     display: block;
     top: 70px;
@@ -88,19 +91,37 @@
     visibility: visible;
 }
 
+
 .header .gnb>ul>li a {
     display: block;
 }
 
 
 .header .gnb>ul>li .sub a {
+    font-size: 14px;
     padding: 0 24px;
 }
 
 
+
 .header .gnb>ul>li .sub a:hover {
+    overflow: hidden;
     background: #ddd;
     transition: 0.3s;
+}
+
+.header .gnb>ul>li:hover::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    border: 2px solid #bbb;
+    border-radius: 50%;
+    z-index: 999;
 }
 
 .header .gnb>ul>li .sub>li~li {
@@ -461,9 +482,10 @@
 }
 
 .Business p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     margin: 0 0 100px 0;
+    color: #777;
 }
 
 .Business .img_wrap img {
@@ -527,13 +549,18 @@
 
 .footer_inner .top_link ul li {
     font-size: 14px;
+    color: #777;
+}
+
+.footer_inner .top_link strong {
+    font-weight: 600;
+    color: #000;
 }
 
 .footer .sns {
-    display: inline-block;
-    justify-content: space-between;
+    display: flex;
     text-align: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .footer .sns i {
@@ -560,6 +587,12 @@
     text-align: center;
     font-size: 14px;
     line-height: 30px;
+    color: #777;
+}
+
+.footer .bt_link strong {
+    font-weight: 600;
+    color: #000;
 }
 
 .totop {
@@ -637,6 +670,4 @@
     bottom: 20px;
     top: 50%;
     left: 50%;
-
 }
-
